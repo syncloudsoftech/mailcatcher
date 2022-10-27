@@ -1,6 +1,6 @@
 # mailcatcher
 
-Lightweight (based on [Alpine](https://www.alpinelinux.org/)) [Docker](https://www.docker.com) image for running a local [SMTP](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol) server to test outgoing emails (powered by [MailCatcher](https://mailcatcher.me)).
+Lightweight (based on [Alpine](https://www.alpinelinux.org/)) [Docker](https://www.docker.com) image for running a (fake) local [SMTP](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol) server to test outgoing emails (powered by [MailCatcher](https://mailcatcher.me)).
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/syncloudsoftech/docker-mailcatcher/cd)
 ![Docker Pulls](https://img.shields.io/docker/pulls/syncloudsoftech/mailcatcher)
@@ -11,7 +11,7 @@ To launch a container from this image, you must have [Docker](https://www.docker
 If already, run the below command:
 
 ```shell
-$ docker run -d --name mailcatcher -p 1025:1025 -p 1080:1080 syncloudsoftech/mailcatcher
+$ docker run -d --name mailcatcher -p 1025:1025 -p 8025:8025 syncloudsoftech/mailcatcher
 ```
 
 To start/stop the (named) container at a later point in time, use below commnads:
@@ -23,6 +23,8 @@ $ docker start mailcatcher
 # stop "mailatcher" named container
 $ docker stop mailcatcher
 ```
+
+Once running, you can access the webmail on [http://127.0.0.1:8025/](http://127.0.0.1:8025/) page.
 
 ### docker-compose.yml
 
@@ -36,10 +38,10 @@ services:
     image: syncloudsoftech/mailcatcher
     environment:
       HTTP_PORT: '1025' # optional
-      SMTP_PORT: '1080' # optional
+      SMTP_PORT: '8025' # optional
     ports:
       - '1025:1025'
-      - '1080:1080'
+      - '8025:8025'
 ```
 
 ### Laravel
@@ -82,8 +84,12 @@ $ docker build -t mailcatcher .
 Run the locally built container as follows:
 
 ```shell
-$ docker run -it -p 1025:1025 -p 1080:1080 mailcatcher
+$ docker run -it -p 1025:1025 -p 8025:8025 mailcatcher
 ```
+
+## Testing
+
+Since [MailCatcher](https://mailcatcher.me) also includes a REST API for retrieving emails, it's super-east to use it testing workflows. See [https://mailcatcher.me/#api](https://mailcatcher.me/#api) for documentation.
 
 ## License
 
