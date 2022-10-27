@@ -17,10 +17,10 @@ $ docker run -d --name mailcatcher -p 1025:1025 -p 8025:8025 syncloudsoftech/mai
 To start/stop the (named) container at a later point in time, use below commnads:
 
 ```
-# start "mailatcher" named container
+# start "mailcatcher" named container
 $ docker start mailcatcher
 
-# stop "mailatcher" named container
+# stop "mailcatcher" named container
 $ docker stop mailcatcher
 ```
 
@@ -89,7 +89,7 @@ $ docker run -it -p 1025:1025 -p 8025:8025 mailcatcher
 
 ## Testing
 
-Since [MailCatcher](https://mailcatcher.me) also includes a REST API for retrieving emails, it's super-east to use it testing workflows. See [https://mailcatcher.me/#api](https://mailcatcher.me/#api) for documentation.
+Since [MailCatcher](https://mailcatcher.me) also includes a REST API for retrieving emails, it's super-easy to use it in testing workflows. See [https://mailcatcher.me/#api](https://mailcatcher.me/#api) for documentation.
 
 ## License
 
