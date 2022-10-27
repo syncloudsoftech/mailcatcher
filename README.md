@@ -11,7 +11,7 @@ To launch a container from this image, you must have [Docker](https://www.docker
 If already, run the below command:
 
 ```shell
-docker run -d --name mailcatcher -p 1025:1025 -p 1080:1080 syncloudsoftech/mailcatcher
+$ docker run -d --name mailcatcher -p 1025:1025 -p 1080:1080 syncloudsoftech/mailcatcher
 ```
 
 To start/stop the (named) container at a later point in time, use below commnads:
@@ -44,7 +44,7 @@ services:
 
 ### Laravel
 
-If your app is built with [Laravel](https://laravel.com/), you can configure it to use our docker service by adding below configuration to your `.env` file.
+If your app is built with [Laravel](https://laravel.com/), you can configure it to use our docker service by adding below configuration to the `.env` file.
 
 ```env
 MAIL_MAILER=smtp
@@ -72,7 +72,7 @@ const transporter = nodemailer.createTransport({
 
 ## Development
 
-Building a container from straight from this project is easy.
+Building or modifying the container yourself from source is also quite easy.
 Just clone the repository and run below command:
 
 ```shell
