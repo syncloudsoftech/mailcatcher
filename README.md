@@ -1,8 +1,8 @@
 # mailcatcher
 
-[Docker](https://www.docker.com) image for running a local [SMTP](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol) server to test outgoing emails (powered by [MailCatcher](https://mailcatcher.me)).
+Lightweight (base on [Alpine](https://www.alpinelinux.org/)) [Docker](https://www.docker.com) image for running a local [SMTP](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol) server to test outgoing emails (powered by [MailCatcher](https://mailcatcher.me)).
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/syncloudsoftech/docker-mailcatcher/ci)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/syncloudsoftech/docker-mailcatcher/cd)
 ![Docker Pulls](https://img.shields.io/docker/pulls/syncloudsoftech/mailcatcher)
 
 ## Usage
