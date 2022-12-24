@@ -2,7 +2,7 @@
 
 Lightweight (based on [Alpine](https://www.alpinelinux.org/)) [Docker](https://www.docker.com) image for running a (fake) local [SMTP](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol) server to test outgoing emails (powered by [MailCatcher](https://mailcatcher.me)).
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/syncloudsoftech/mailcatcher/cd)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/syncloudsoftech/mailcatcher/cd.yml?branch=main)
 ![Docker Pulls](https://img.shields.io/docker/pulls/syncloudsoftech/mailcatcher)
 
 ## Usage
