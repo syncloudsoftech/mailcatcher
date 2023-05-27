@@ -37,8 +37,8 @@ services:
   mailcatcher:
     image: syncloudsoftech/mailcatcher
     environment:
-      HTTP_PORT: '1025' # optional
-      SMTP_PORT: '8025' # optional
+      HTTP_PORT: '8025' # optional
+      SMTP_PORT: '1025' # optional
     ports:
       - '1025:1025'
       - '8025:8025'
