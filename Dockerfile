@@ -1,4 +1,4 @@
-FROM ruby:3-alpine
+FROM ruby:3.1-alpine
 
 LABEL maintainer="Syncloud Softech admin@syncloudsoft.com"
 
